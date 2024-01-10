@@ -1,3 +1,5 @@
+Remove-Item "$HOME\stop.*" -ErrorAction SilentlyContinue
+
 while ($true) {
     if (Get-ChildItem "$HOME\stop.*" | Where-Object { !$_.PSIsContainer }) { break }
 
